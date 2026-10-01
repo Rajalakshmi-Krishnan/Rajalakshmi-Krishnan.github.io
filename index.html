@@ -146,21 +146,34 @@ section h2 {
 /* Education */
 .education {
     background: #eef0ff;
-    text-align: center;
+}
+
+.education-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
 }
 
 .education-card {
     background: white;
-    max-width: 700px;
-    margin: auto;
+    flex: 1;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 18px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.education-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .education-card h3 {
     color: #5b4ee8;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    line-height: 1.4;
 }
 
 .education-card p {
@@ -168,9 +181,14 @@ section h2 {
     color: #555;
 }
 
-.education-card hr {
-    border: none;
-    border-top: 1px solid #ddd;
+.education-year {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background: #eef0ff;
+    color: #5b4ee8;
+    font-weight: bold;
 }
 
 /* Projects */
@@ -255,6 +273,14 @@ footer {
     section {
         padding: 55px 25px;
     }
+
+    .education-container {
+        flex-direction: column;
+    }
+
+    .education-card {
+        width: 100%;
+    }
 }
 </style>
 </head>
@@ -268,217 +294,4 @@ footer {
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- HOME -->
-<section class="hero" id="home">
-
-    <div class="hero-text">
-
-        <p>Hello, I'm</p>
-
-        <h1>Rajalakshmi 👋</h1>
-
-        <h2>B.Sc. Computer Science Student</h2>
-
-        <p class="hero-description">
-            I am a passionate Computer Science student interested in
-            programming, technology and creative projects. I enjoy
-            learning new skills and building useful projects.
-        </p>
-
-        <div class="buttons">
-            <a href="#projects" class="button">View Projects</a>
-            <a href="#contact" class="button secondary">Contact Me</a>
-        </div>
-
-    </div>
-
-    <img src="file_00000000edc0820cb9fc0691c2e73695.png"
-         alt="Rajalakshmi"
-         class="profile">
-
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <p class="about">
-        I'm Rajalakshmi, a B.Sc. Computer Science student with an
-        interest in programming, debugging, and error correction.
-        I enjoy identifying errors, solving problems, and improving
-        my coding skills. Apart from technology, I love drawing and
-        creating handmade crafts. I believe that combining logical
-        thinking with creativity helps me learn new things and
-        develop unique ideas.
-    </p>
-
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-
-    <h2>My Skills</h2>
-
-    <div class="skills">
-
-        <div class="skill">💻 C Programming</div>
-
-        <div class="skill">🐞 Debugging & Error Correction</div>
-
-        <div class="skill">🧩 Problem Solving</div>
-
-        <div class="skill">🌐 HTML & CSS</div>
-
-        <div class="skill">🎨 Drawing</div>
-
-        <div class="skill">✂️ Craft Making</div>
-
-        <div class="skill">📊 PowerPoint</div>
-
-    </div>
-
-</section>
-
-<!-- EDUCATION -->
-<section class="education" id="education">
-
-    <h2>Education</h2>
-
-    <div class="education-card">
-
-        <h3>B.Sc. Computer Science</h3>
-
-        <p>
-            Currently pursuing undergraduate studies
-            in Computer Science.
-        </p>
-
-        <br>
-
-        <p>2026 – 2029</p>
-
-        <hr style="margin: 25px 0;">
-
-        <h3>Sri Sivananda Balalaya Senior Secondary School (CBSE)</h3>
-
-        <p>
-            I completed my schooling from LKG to 12th Standard
-            at Sri Sivananda Balalaya Senior Secondary School (CBSE),
-            where I built a strong academic foundation and developed
-            my interest in learning, creativity, and personal growth.
-        </p>
-
-    </div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-
-    <h2>My Projects</h2>
-
-    <div class="projects">
-
-        <div class="project">
-
-            <h3>Inventory Management System using C</h3>
-
-            <p>
-                A C programming project for managing products,
-                stock details, prices and product information.
-            </p>
-
-        </div>
-
-        <div class="project">
-
-            <h3>Parking Management System</h3>
-
-            <p>
-                A simple programming project for checking parking
-                slot availability and managing vehicle parking.
-            </p>
-
-        </div>
-
-        <div class="project">
-
-            <h3>Smart Waste Management</h3>
-
-            <p>
-                A programming project focused on waste identification,
-                recording and recycling awareness.
-            </p>
-
-        </div>
-
-        <div class="project">
-
-            <h3>Personal Portfolio Website</h3>
-
-            <p>
-                A personal website created using HTML and CSS
-                to showcase my skills, education and projects.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-
-    <h2>Let's Connect</h2>
-
-    <p>
-        I'm always interested in learning, creating,
-        and connecting with people who love technology
-        and creativity.
-    </p>
-
-    <br>
-
-    <p>
-        📧 Email:
-        <a href="mailto:vkrishnananthi@gmail.com">
-            vkrishnananthi@gmail.com
-        </a>
-    </p>
-
-    <br>
-
-    <p>
-        💻 GitHub:
-        <a href="https://github.com/Rajalakshmi-Krishnan"
-           target="_blank">
-            Rajalakshmi-Krishnan
-        </a>
-    </p>
-
-    <br>
-
-    <p>
-        💼 LinkedIn:
-        <a href="https://www.linkedin.com/in/rajalakshmi-krishnan09"
-           target="_blank">
-            Rajalakshmi Krishnan
-        </a>
-    </p>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-
-    <p>© 2026 Rajalakshmi | Personal Portfolio</p>
-
-</footer>
-
-</body>
-    </html>
+    <a href="#contact">Contact</
