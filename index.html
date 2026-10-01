@@ -52,13 +52,27 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
     background: linear-gradient(135deg, #eef0ff, #ffffff);
 }
 
 .hero-text {
-    max-width: 600px;
+    max-width: 650px;
     animation: slideLeft 1s ease;
+}
+
+/* HOME BADGE */
+
+.home-badge {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #5b4ee8;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
 }
 
 .greeting {
@@ -69,17 +83,26 @@ nav a:hover {
 
 .hero h1 {
     font-size: 52px;
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .hero h2 {
     color: #5b4ee8;
     margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .hero-description {
     color: #555;
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+/* PROFILE IMAGE */
+
+.profile-container {
+    position: relative;
 }
 
 .profile {
@@ -95,6 +118,24 @@ nav a:hover {
 
 .profile:hover {
     transform: scale(1.05);
+}
+
+/* SMALL DECORATION */
+
+.profile-decoration {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: #5b4ee8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    bottom: 10px;
+    left: 0;
+    box-shadow: 0 8px 20px rgba(91,78,232,0.3);
 }
 
 /* BUTTONS */
@@ -240,8 +281,6 @@ section h2 {
     transform: translateY(-10px);
     box-shadow: 0 18px 35px rgba(91,78,232,0.18);
 }
-
-/* PROJECT ICON */
 
 .project-icon {
     font-size: 45px;
@@ -389,9 +428,19 @@ footer {
         font-size: 40px;
     }
 
+    .hero h2 {
+        font-size: 21px;
+    }
+
     .profile {
         width: 230px;
         height: 230px;
+    }
+
+    .profile-decoration {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 
     .hero-description {
@@ -451,17 +500,29 @@ footer {
 
 <div class="hero-text">
 
-<p class="greeting">Hello, I'm</p>
+<div class="home-badge">
+✨ Open to Learning & Opportunities
+</div>
 
-<h1>Rajalakshmi 👋</h1>
+<p class="greeting">
+Hello, I'm
+</p>
 
-<h2>B.Sc. Computer Science Student</h2>
+<h1>
+Rajalakshmi 👋
+</h1>
+
+<h2>
+B.Sc. Computer Science Student
+</h2>
 
 <p class="hero-description">
 
 I am a passionate Computer Science student interested in
-programming, technology and creative projects. I enjoy
-learning new skills and building useful projects.
+programming, problem solving and technology. I enjoy
+learning new skills, correcting errors, building useful
+projects and exploring creative ideas through drawing
+and craft making.
 
 </p>
 
@@ -479,11 +540,20 @@ Contact Me
 
 </div>
 
+
+<div class="profile-container">
+
 <img
 src="file_00000000edc0820cb9fc0691c2e73695.png"
 alt="Rajalakshmi"
 class="profile"
 >
+
+<div class="profile-decoration">
+💻
+</div>
+
+</div>
 
 </section>
 
