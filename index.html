@@ -21,30 +21,69 @@ body {
     color: #172033;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
-    background: #10182b;
-    padding: 18px 10px;
-    text-align: center;
+    background: rgba(16, 24, 43, 0.97);
+    padding: 14px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-nav a {
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-logo {
     color: white;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
-    margin: 0 10px;
+    margin-right: 25px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-links a {
+    color: #dfe3f2;
+    text-decoration: none;
+    padding: 10px 13px;
+    border-radius: 20px;
     font-size: 14px;
+    font-weight: 500;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
-nav a:hover {
-    color: #a9a0ff;
+.nav-links a:hover {
+    background: #5b4ee8;
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* HOME */
+.nav-links a:first-child {
+    background: #5b4ee8;
+    color: white;
+}
+
+/* =========================
+   HOME
+========================= */
 
 .hero {
     min-height: 90vh;
@@ -60,8 +99,6 @@ nav a:hover {
     max-width: 650px;
     animation: slideLeft 1s ease;
 }
-
-/* HOME BADGE */
 
 .home-badge {
     display: inline-block;
@@ -99,8 +136,6 @@ nav a:hover {
     max-width: 600px;
 }
 
-/* PROFILE IMAGE */
-
 .profile-container {
     position: relative;
 }
@@ -120,8 +155,6 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* SMALL DECORATION */
-
 .profile-decoration {
     position: absolute;
     width: 55px;
@@ -138,7 +171,9 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(91,78,232,0.3);
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .buttons {
     margin-top: 30px;
@@ -166,7 +201,9 @@ nav a:hover {
     border: 2px solid #5b4ee8;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 70px 8%;
@@ -178,7 +215,9 @@ section h2 {
     margin-bottom: 35px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about {
     max-width: 800px;
@@ -188,7 +227,9 @@ section h2 {
     color: #555;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills {
     display: flex;
@@ -210,7 +251,9 @@ section h2 {
     box-shadow: 0 12px 25px rgba(91,78,232,0.18);
 }
 
-/* EDUCATION */
+/* =========================
+   EDUCATION
+========================= */
 
 .education {
     background: #eef0ff;
@@ -258,7 +301,9 @@ section h2 {
     font-weight: bold;
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects {
     max-width: 1000px;
@@ -303,7 +348,9 @@ section h2 {
     line-height: 1.7;
 }
 
-/* ACHIEVEMENTS & INTERESTS */
+/* =========================
+   ACHIEVEMENTS
+========================= */
 
 .achievements {
     background: #ffffff;
@@ -347,7 +394,9 @@ section h2 {
     line-height: 1.7;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     background: #10182b;
@@ -373,7 +422,9 @@ section h2 {
     color: white;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #0b1020;
@@ -382,7 +433,9 @@ footer {
     padding: 20px;
 }
 
-/* ANIMATIONS */
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes slideLeft {
 
@@ -414,9 +467,35 @@ footer {
 
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE NAVIGATION
+========================= */
 
 @media (max-width: 700px) {
+
+    nav {
+        padding: 12px 8px;
+        overflow-x: auto;
+    }
+
+    .nav-container {
+        justify-content: flex-start;
+        min-width: max-content;
+    }
+
+    .nav-logo {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links a {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
 
     .hero {
         flex-direction: column-reverse;
@@ -459,11 +538,6 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    nav a {
-        margin: 0 5px;
-        font-size: 12px;
-    }
-
     section {
         padding: 55px 25px;
     }
@@ -483,6 +557,14 @@ footer {
 
 <nav>
 
+<div class="nav-container">
+
+<a href="#home" class="nav-logo">
+Rajalakshmi
+</a>
+
+<div class="nav-links">
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
@@ -490,6 +572,10 @@ footer {
 <a href="#projects">Projects</a>
 <a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
+
+</div>
+
+</div>
 
 </nav>
 
