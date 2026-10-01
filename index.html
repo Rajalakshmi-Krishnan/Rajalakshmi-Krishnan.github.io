@@ -264,6 +264,50 @@ section h2 {
     line-height: 1.7;
 }
 
+/* ACHIEVEMENTS & INTERESTS */
+
+.achievements {
+    background: #ffffff;
+}
+
+.achievement-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.achievement-card {
+    background: #f7f8fc;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border-top: 4px solid #5b4ee8;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(91,78,232,0.15);
+}
+
+.achievement-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.achievement-card h3 {
+    color: #5b4ee8;
+    margin-bottom: 12px;
+}
+
+.achievement-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
 /* CONTACT */
 
 .contact {
@@ -362,6 +406,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .achievement-container {
+        grid-template-columns: 1fr;
+    }
+
     nav a {
         margin: 0 5px;
         font-size: 12px;
@@ -391,6 +439,7 @@ footer {
 <a href="#skills">Skills</a>
 <a href="#education">Education</a>
 <a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
 
 </nav>
@@ -619,6 +668,84 @@ recording and recycling awareness.
 
 A personal website created using HTML and CSS
 to showcase my skills, education and projects.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ACHIEVEMENTS & INTERESTS -->
+
+<section class="achievements" id="achievements">
+
+<h2>Achievements & Interests</h2>
+
+<div class="achievement-container">
+
+
+<div class="achievement-card">
+
+<div class="achievement-icon">🏆</div>
+
+<h3>Academic Growth</h3>
+
+<p>
+
+Continuously learning Computer Science concepts
+and improving my programming and problem-solving skills.
+
+</p>
+
+</div>
+
+
+<div class="achievement-card">
+
+<div class="achievement-icon">💻</div>
+
+<h3>Programming</h3>
+
+<p>
+
+Interested in C programming, debugging, error correction
+and developing simple useful projects.
+
+</p>
+
+</div>
+
+
+<div class="achievement-card">
+
+<div class="achievement-icon">🎨</div>
+
+<h3>Drawing</h3>
+
+<p>
+
+I enjoy drawing and expressing creative ideas
+through art and visual designs.
+
+</p>
+
+</div>
+
+
+<div class="achievement-card">
+
+<div class="achievement-icon">✂️</div>
+
+<h3>Craft Making</h3>
+
+<p>
+
+I enjoy creating handmade crafts and exploring
+new creative ideas in my free time.
 
 </p>
 
