@@ -1,196 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajalakshmi | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<title>Rajalakshmi | Portfolio</title>
 
-        body {
-            background: #f5f7fb;
-            color: #222;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
 
-        nav {
-            background: #111827;
-            padding: 20px;
-            text-align: center;
-        }
+body {
+    background: #f7f8fc;
+    color: #172033;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 15px;
-        }
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #10182b;
+    padding: 18px;
+    text-align: center;
+}
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #e0e7ff, #ffffff);
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 15px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            color: #111827;
-            margin-bottom: 15px;
-        }
+nav a:hover {
+    color: #8b7cff;
+}
 
-        .hero h2 {
-            color: #4f46e5;
-            margin-bottom: 20px;
-        }
+/* Home */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #eef0ff, #ffffff);
+}
 
-        .hero p {
-            max-width: 600px;
-            line-height: 1.7;
-            margin: auto;
-        }
+.hero-text {
+    flex: 1;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #4f46e5;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-        }
+.hero-text p:first-child {
+    color: #5b4ee8;
+    font-weight: bold;
+    font-size: 20px;
+}
 
-        section {
-            padding: 60px 25px;
-            max-width: 1000px;
-            margin: auto;
-        }
+.hero h1 {
+    font-size: 55px;
+    margin: 12px 0;
+}
 
-        section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #111827;
-        }
+.hero h2 {
+    color: #5b4ee8;
+    margin-bottom: 20px;
+}
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
+.hero-description {
+    line-height: 1.7;
+    max-width: 550px;
+    color: #555;
+}
 
-        .skill {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px #ddd;
-        }
+.profile {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
-        .project {
-            background: white;
-            padding: 25px;
-            margin: 15px 0;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px #ddd;
-        }
+.buttons {
+    margin-top: 30px;
+}
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-    </style>
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background: #5b4ee8;
+    color: white;
+    text-decoration: none;
+}
+
+.button.secondary {
+    background: transparent;
+    color: #5b4ee8;
+    border: 2px solid #5b4ee8;
+}
+
+/* Sections */
+section {
+    padding: 70px 10%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.skill {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Education */
+.education {
+    background: #eef0ff;
+    text-align: center;
+}
+
+.education-card {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.education-card h3 {
+    color: #5b4ee8;
+    margin-bottom: 10px;
+}
+
+/* Projects */
+.projects {
+    max-width: 900px;
+    margin: auto;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.project h3 {
+    color: #5b4ee8;
+    margin-bottom: 10px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    background: #10182b;
+    color: white;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact a {
+    color: #a9a0ff;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: #0b1020;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 25px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .profile {
+        width: 230px;
+        height: 230px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 55px 25px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <div class="hero" id="home">
-        <div>
-            <h1>Hi, I'm Rajalakshmi 👋</h1>
-            <h2>B.Sc. Computer Science Student</h2>
-            <p>
-                Welcome to my personal portfolio. 
-                I am interested in technology, programming and creative projects.
-            </p>
+<!-- HOME -->
+<section class="hero" id="home">
 
-            <a href="#about" class="button">Explore My Portfolio</a>
+    <div class="hero-text">
+
+        <p>Hello, I'm</p>
+
+        <h1>Rajalakshmi 👋</h1>
+
+        <h2>B.Sc. Computer Science Student</h2>
+
+        <p class="hero-description">
+            I am a passionate Computer Science student interested in
+            programming, technology and creative projects. I enjoy
+            learning new skills and building useful projects.
+        </p>
+
+        <div class="buttons">
+            <a href="#projects" class="button">View Projects</a>
+            <a href="#contact" class="button secondary">Contact Me</a>
         </div>
+
     </div>
 
-    <section id="about">
-        <h2>About Me</h2>
+    <img src="profile.png" alt="Rajalakshmi" class="profile">
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <p class="about">
+        I am currently pursuing B.Sc. Computer Science.
+        I am developing my programming skills and exploring
+        web development and technology. I believe in learning
+        through practical projects and continuously improving
+        my technical knowledge.
+    </p>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">C Programming</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">PowerPoint</div>
+        <div class="skill">Creative Design</div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+
+    <h2>Education</h2>
+
+    <div class="education-card">
+
+        <h3>B.Sc. Computer Science</h3>
 
         <p>
-            I am a Computer Science student passionate about learning
-            programming and developing useful projects. I enjoy exploring
-            new technologies and improving my technical skills.
+            Currently pursuing undergraduate studies
+            in Computer Science.
         </p>
-    </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
+        <br>
 
-        <div class="skills">
-            <div class="skill">C Programming</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Problem Solving</div>
-            <div class="skill">Microsoft PowerPoint</div>
-        </div>
-    </section>
+        <p>
+            2026 – 2029
+        </p>
 
-    <section id="projects">
-        <h2>My Projects</h2>
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div class="projects">
 
         <div class="project">
+
             <h3>Inventory Management System using C</h3>
+
             <p>
-                A C programming project designed to manage products,
-                stock, prices and product details.
+                A C programming project for managing products,
+                stock details, prices and product information.
             </p>
+
         </div>
+
 
         <div class="project">
-            <h3>Smart Waste Management Project</h3>
+
+            <h3>Smart Waste Management</h3>
+
             <p>
-                A programming project focused on waste identification,
-                recording and recycling awareness.
+                A programming project focused on waste
+                identification, recording and recycling awareness.
             </p>
+
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
+    </div>
 
-        <p style="text-align:center;">
-            📧 Email: Your Email Here
-        </p>
+</section>
 
-        <p style="text-align:center; margin-top:15px;">
-            🔗 LinkedIn | GitHub
-        </p>
-    </section>
 
-    <footer>
-        <p>© 2026 Rajalakshmi. All Rights Reserved.</p>
-    </footer>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        I would love to connect and learn with others
+        interested in technology and programming.
+    </p>
+
+    <br>
+
+    <p>
+        📧 Email:
+        <a href="mailto:your-email@example.com">
+            your-email@example.com
+        </a>
+    </p>
+
+    <br>
+
+    <p>
+        💻 GitHub:
+        <a href="https://github.com/Rajalakshmi-Krishnan">
+            Rajalakshmi-Krishnan
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 Rajalakshmi | Personal Portfolio</p>
+
+</footer>
 
 </body>
-  </html>
+    </html>
