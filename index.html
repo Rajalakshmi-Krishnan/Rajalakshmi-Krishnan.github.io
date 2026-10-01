@@ -37,6 +37,11 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a9a0ff;
 }
 
 /* HOME */
@@ -53,6 +58,7 @@ nav a {
 
 .hero-text {
     max-width: 600px;
+    animation: slideLeft 1s ease;
 }
 
 .greeting {
@@ -83,7 +89,15 @@ nav a {
     border-radius: 50%;
     border: 8px solid white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
 }
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTONS */
 
 .buttons {
     margin-top: 30px;
@@ -97,6 +111,12 @@ nav a {
     background: #5b4ee8;
     color: white;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(91,78,232,0.3);
 }
 
 .button-outline {
@@ -141,6 +161,12 @@ section h2 {
     padding: 15px 22px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(91,78,232,0.18);
 }
 
 /* EDUCATION */
@@ -163,6 +189,12 @@ section h2 {
     border-radius: 18px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
 .education-card h3 {
@@ -198,6 +230,12 @@ section h2 {
     margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(91,78,232,0.15);
 }
 
 .project h3 {
@@ -229,6 +267,11 @@ section h2 {
 .contact a {
     color: #a9a0ff;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: white;
 }
 
 /* FOOTER */
@@ -238,6 +281,34 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* ANIMATIONS */
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* MOBILE */
@@ -274,6 +345,10 @@ footer {
 
     section {
         padding: 55px 25px;
+    }
+
+    .button {
+        margin-bottom: 10px;
     }
 }
 
@@ -396,7 +471,6 @@ develop unique ideas.
 
 <div class="education-container">
 
-
 <div class="education-card">
 
 <div style="font-size:40px;">🎓</div>
@@ -449,7 +523,6 @@ LKG – 12th Standard
 
 </div>
 
-
 </div>
 
 </section>
@@ -462,7 +535,6 @@ LKG – 12th Standard
 <h2>My Projects</h2>
 
 <div class="projects">
-
 
 <div class="project">
 
@@ -518,7 +590,6 @@ to showcase my skills, education and projects.
 </p>
 
 </div>
-
 
 </div>
 
@@ -586,4 +657,4 @@ Rajalakshmi Krishnan
 </footer>
 
 </body>
-    </html>
+                          </html>
