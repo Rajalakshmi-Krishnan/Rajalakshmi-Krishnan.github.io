@@ -7,12 +7,13 @@
 <title>Rajalakshmi | Portfolio</title>
 
 <style>
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,51 +21,49 @@ body {
     color: #172033;
 }
 
-/* Navigation */
+/* NAVIGATION */
+
 nav {
+    background: #10182b;
+    padding: 18px 10px;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #10182b;
-    padding: 18px;
-    text-align: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
-    font-size: 15px;
+    margin: 0 10px;
+    font-size: 14px;
 }
 
-nav a:hover {
-    color: #8b7cff;
-}
+/* HOME */
 
-/* Home */
 .hero {
     min-height: 90vh;
+    padding: 60px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
-    padding: 70px 10%;
+    gap: 40px;
     background: linear-gradient(135deg, #eef0ff, #ffffff);
 }
 
 .hero-text {
-    flex: 1;
+    max-width: 600px;
 }
 
-.hero-text p:first-child {
+.greeting {
     color: #5b4ee8;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .hero h1 {
-    font-size: 55px;
-    margin: 12px 0;
+    font-size: 52px;
+    margin: 15px 0;
 }
 
 .hero h2 {
@@ -73,16 +72,14 @@ nav a:hover {
 }
 
 .hero-description {
-    line-height: 1.7;
-    max-width: 550px;
     color: #555;
+    line-height: 1.7;
 }
 
 .profile {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     object-fit: cover;
-    object-position: center top;
     border-radius: 50%;
     border: 8px solid white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -94,7 +91,7 @@ nav a:hover {
 
 .button {
     display: inline-block;
-    padding: 13px 24px;
+    padding: 13px 22px;
     margin-right: 10px;
     border-radius: 25px;
     background: #5b4ee8;
@@ -102,15 +99,16 @@ nav a:hover {
     text-decoration: none;
 }
 
-.button.secondary {
-    background: transparent;
+.button-outline {
+    background: white;
     color: #5b4ee8;
     border: 2px solid #5b4ee8;
 }
 
-/* Sections */
+/* SECTIONS */
+
 section {
-    padding: 70px 10%;
+    padding: 70px 8%;
 }
 
 section h2 {
@@ -119,7 +117,8 @@ section h2 {
     margin-bottom: 35px;
 }
 
-/* About */
+/* ABOUT */
+
 .about {
     max-width: 800px;
     margin: auto;
@@ -128,7 +127,8 @@ section h2 {
     color: #555;
 }
 
-/* Skills */
+/* SKILLS */
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -138,12 +138,13 @@ section h2 {
 
 .skill {
     background: white;
-    padding: 15px 25px;
+    padding: 15px 22px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* Education */
+/* EDUCATION */
+
 .education {
     background: #eef0ff;
 }
@@ -153,32 +154,25 @@ section h2 {
     margin: auto;
     display: flex;
     gap: 25px;
-    justify-content: center;
 }
 
 .education-card {
-    background: white;
     flex: 1;
+    background: white;
     padding: 30px;
     border-radius: 18px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     text-align: center;
-}
-
-.education-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
 .education-card h3 {
     color: #5b4ee8;
-    margin-bottom: 12px;
-    line-height: 1.4;
+    margin: 15px 0;
 }
 
 .education-card p {
-    line-height: 1.7;
     color: #555;
+    line-height: 1.7;
 }
 
 .education-year {
@@ -191,7 +185,8 @@ section h2 {
     font-weight: bold;
 }
 
-/* Projects */
+/* PROJECTS */
+
 .projects {
     max-width: 900px;
     margin: auto;
@@ -200,7 +195,7 @@ section h2 {
 .project {
     background: white;
     padding: 25px;
-    margin: 20px 0;
+    margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
@@ -211,19 +206,24 @@ section h2 {
 }
 
 .project p {
-    line-height: 1.7;
     color: #555;
+    line-height: 1.7;
 }
 
-/* Contact */
+/* CONTACT */
+
 .contact {
-    text-align: center;
     background: #10182b;
     color: white;
+    text-align: center;
 }
 
 .contact h2 {
     color: white;
+}
+
+.contact p {
+    line-height: 1.8;
 }
 
 .contact a {
@@ -231,11 +231,8 @@ section h2 {
     text-decoration: none;
 }
 
-.contact a:hover {
-    text-decoration: underline;
-}
+/* FOOTER */
 
-/* Footer */
 footer {
     background: #0b1020;
     color: white;
@@ -243,7 +240,8 @@ footer {
     padding: 20px;
 }
 
-/* Mobile */
+/* MOBILE */
+
 @media (max-width: 700px) {
 
     .hero {
@@ -262,36 +260,330 @@ footer {
     }
 
     .hero-description {
-        margin: auto;
-    }
-
-    nav a {
-        margin: 0 6px;
-        font-size: 13px;
-    }
-
-    section {
-        padding: 55px 25px;
+        margin-top: 10px;
     }
 
     .education-container {
         flex-direction: column;
     }
 
-    .education-card {
-        width: 100%;
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 25px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
+
 <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<p class="greeting">Hello, I'm</p>
+
+<h1>Rajalakshmi 👋</h1>
+
+<h2>B.Sc. Computer Science Student</h2>
+
+<p class="hero-description">
+
+I am a passionate Computer Science student interested in
+programming, technology and creative projects. I enjoy
+learning new skills and building useful projects.
+
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="button">
+View Projects
+</a>
+
+<a href="#contact" class="button button-outline">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+
+<img
+src="file_00000000edc0820cb9fc0691c2e73695.png"
+alt="Rajalakshmi"
+class="profile"
+>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p class="about">
+
+I'm Rajalakshmi, a B.Sc. Computer Science student with an
+interest in programming, debugging, and error correction.
+I enjoy identifying errors, solving problems, and improving
+my coding skills. Apart from technology, I love drawing and
+creating handmade crafts. I believe that combining logical
+thinking with creativity helps me learn new things and
+develop unique ideas.
+
+</p>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+
+<div class="skill">💻 C Programming</div>
+
+<div class="skill">🐞 Debugging & Error Correction</div>
+
+<div class="skill">🧩 Problem Solving</div>
+
+<div class="skill">🌐 HTML & CSS</div>
+
+<div class="skill">🎨 Drawing</div>
+
+<div class="skill">✂️ Craft Making</div>
+
+<div class="skill">📊 PowerPoint</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+<h2>Education</h2>
+
+<div class="education-container">
+
+
+<div class="education-card">
+
+<div style="font-size:40px;">🎓</div>
+
+<h3>B.Sc. Computer Science</h3>
+
+<p>
+
+Currently pursuing undergraduate studies
+in Computer Science and developing my skills
+in programming, problem solving and technology.
+
+</p>
+
+<span class="education-year">
+
+2026 – 2029
+
+</span>
+
+</div>
+
+
+<div class="education-card">
+
+<div style="font-size:40px;">🏫</div>
+
+<h3>
+
+Sri Sivananda Balalaya
+Senior Secondary School (CBSE)
+
+</h3>
+
+<p>
+
+I completed my schooling from LKG to 12th Standard
+at Sri Sivananda Balalaya Senior Secondary School
+(CBSE), where I built a strong academic foundation
+and developed my interest in learning, creativity,
+and personal growth.
+
+</p>
+
+<span class="education-year">
+
+LKG – 12th Standard
+
+</span>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>My Projects</h2>
+
+<div class="projects">
+
+
+<div class="project">
+
+<h3>Inventory Management System using C</h3>
+
+<p>
+
+A C programming project for managing products,
+stock details, prices and product information.
+
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Parking Management System</h3>
+
+<p>
+
+A simple programming project for checking parking
+slot availability and managing vehicle parking.
+
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Smart Waste Management</h3>
+
+<p>
+
+A programming project focused on waste identification,
+recording and recycling awareness.
+
+</p>
+
+</div>
+
+
+<div class="project">
+
+<h3>Personal Portfolio Website</h3>
+
+<p>
+
+A personal website created using HTML and CSS
+to showcase my skills, education and projects.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Let's Connect</h2>
+
+<p>
+
+I'm always interested in learning, creating,
+and connecting with people who love technology
+and creativity.
+
+</p>
+
+<br>
+
+<p>
+
+📧 Email:
+<a href="mailto:vkrishnananthi@gmail.com">
+vkrishnananthi@gmail.com
+</a>
+
+</p>
+
+<br>
+
+<p>
+
+💻 GitHub:
+<a href="https://github.com/Rajalakshmi-Krishnan" target="_blank">
+Rajalakshmi-Krishnan
+</a>
+
+</p>
+
+<br>
+
+<p>
+
+💼 LinkedIn:
+<a href="https://www.linkedin.com/in/rajalakshmi-krishnan09" target="_blank">
+Rajalakshmi Krishnan
+</a>
+
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Rajalakshmi | Personal Portfolio
+</p>
+
+</footer>
+
+</body>
+    </html>
