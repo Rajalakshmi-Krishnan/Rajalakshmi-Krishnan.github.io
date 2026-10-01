@@ -220,32 +220,57 @@ section h2 {
 /* PROJECTS */
 
 .projects {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
 .project {
     background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 18px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
+    border-top: 4px solid #5b4ee8;
 }
 
 .project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(91,78,232,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(91,78,232,0.18);
+}
+
+.project-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
 }
 
 .project h3 {
     color: #5b4ee8;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .project p {
     color: #555;
     line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #5b4ee8;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-button:hover {
+    background: #10182b;
+    transform: translateX(5px);
 }
 
 /* CONTACT */
@@ -286,6 +311,7 @@ footer {
 /* ANIMATIONS */
 
 @keyframes slideLeft {
+
     from {
         opacity: 0;
         transform: translateX(-50px);
@@ -295,9 +321,11 @@ footer {
         opacity: 1;
         transform: translateX(0);
     }
+
 }
 
 @keyframes float {
+
     0% {
         transform: translateY(0);
     }
@@ -309,6 +337,7 @@ footer {
     100% {
         transform: translateY(0);
     }
+
 }
 
 /* MOBILE */
@@ -338,6 +367,10 @@ footer {
         flex-direction: column;
     }
 
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
     nav a {
         margin: 0 5px;
         font-size: 12px;
@@ -350,6 +383,7 @@ footer {
     .button {
         margin-bottom: 10px;
     }
+
 }
 
 </style>
@@ -536,7 +570,10 @@ LKG – 12th Standard
 
 <div class="projects">
 
+
 <div class="project">
+
+<div class="project-icon">📦</div>
 
 <h3>Inventory Management System using C</h3>
 
@@ -547,10 +584,16 @@ stock details, prices and product information.
 
 </p>
 
+<a href="#" class="project-button">
+View Project →
+</a>
+
 </div>
 
 
 <div class="project">
+
+<div class="project-icon">🚗</div>
 
 <h3>Parking Management System</h3>
 
@@ -561,10 +604,16 @@ slot availability and managing vehicle parking.
 
 </p>
 
+<a href="#" class="project-button">
+View Project →
+</a>
+
 </div>
 
 
 <div class="project">
+
+<div class="project-icon">♻️</div>
 
 <h3>Smart Waste Management</h3>
 
@@ -575,10 +624,16 @@ recording and recycling awareness.
 
 </p>
 
+<a href="#" class="project-button">
+View Project →
+</a>
+
 </div>
 
 
 <div class="project">
+
+<div class="project-icon">🌐</div>
 
 <h3>Personal Portfolio Website</h3>
 
@@ -589,7 +644,12 @@ to showcase my skills, education and projects.
 
 </p>
 
+<a href="#" class="project-button">
+View Project →
+</a>
+
 </div>
+
 
 </div>
 
@@ -657,4 +717,4 @@ Rajalakshmi Krishnan
 </footer>
 
 </body>
-                          </html>
+    </html>
